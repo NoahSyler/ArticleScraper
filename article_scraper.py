@@ -1,5 +1,4 @@
-#https://www.prnewswire.com/news/miller-industries%2C-inc./?page=2&pagesize=100
-#https://www.prnewswire.com/news/miller-industries%2C-inc./?page=2&pagesize=100
+#Author: Noah Syler
 
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options as EdgeOptions
@@ -114,7 +113,8 @@ for url in urls:
 
 		driver.execute_script(f"window.open('');")
 		driver.switch_to.window(driver.window_handles[1])
-		driver.get("https://www.millerind.com/passport.php")
+		#Switch to login page for the site upload to
+		driver.get("<url>")
 
 		user_name = driver.find_element(By.NAME, "username")
 		password = driver.find_element(By.NAME, "password")
